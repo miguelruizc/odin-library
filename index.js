@@ -9,12 +9,31 @@ function Book(title, author, numberOfPages, isRead) {
     this.isRead = isRead;
 }
 
-function setAddbookEventListener(){
+function setAddEventListeners(){
     //Add book button event listener
     let addBtn = document.querySelector(`#addBookBtn`);
 
     addBtn.addEventListener("click", function() {
+        const modal = document.getElementById("modal-form");
+        modal.showModal();
         addBookToLibrary();
+    });
+
+    //Cancel button
+    let cancelBtn = document.getElementById("cancel");
+
+    cancelBtn.addEventListener("click", function() {
+        const modal = document.getElementById("modal-form");
+        modal.close();
+        console.log("cancel button clicked");
+    });
+
+    //Submit button
+    let submitBtn = document.getElementById("submit");
+
+    submitBtn.addEventListener("click", function(e) {
+        console.log("Submit button clicked");
+        e.preventDefault();
     });
 }
 
@@ -137,7 +156,7 @@ myLibrary.push(new Book("A Clash of Canapes", "George R. R. Martini", 874, false
 
 console.table(myLibrary);
 
-setAddbookEventListener();
+setAddEventListeners();
 generateHtmlCards();
 setEventListeners();
 
