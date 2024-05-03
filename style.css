@@ -47,4 +47,43 @@ table {
   #addBookBtn {
     margin-bottom: 6px;
   }
+
+  form {
+    font-size: 12px;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  form>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form input[type="text"],
+  form input[type="password"],
+  form input[type="email"],
+  form input[type="number"],
+  form select,
+  form textarea {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  form input[type="checkbox"],
+  form input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  .form-buttons {
+    gap: 10px;
+  }
+
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.30);
+  }
   

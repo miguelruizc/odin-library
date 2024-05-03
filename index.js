@@ -154,15 +154,15 @@ function setEventListeners() {
 
 // Program starts here:
 const myLibrary =  [];
-myLibrary.push(new Book("The Sorcerer's Stonehenge", "Rowling Stones", 336, true));
+myLibrary.push(new Book("The Sorcerer's Stonehenge", "Rowling Stones", 336, false));
 myLibrary.push(new Book("The Fellowship of the Bling", "J. R. R. Token", 527, false));
-myLibrary.push(new Book("A Game of Groans", "George R. R. Martian", 694, true));
+myLibrary.push(new Book("A Game of Groans", "George R. R. Martian", 694, false));
 myLibrary.push(new Book("The Lion, the Witch, and the Wardrobe Malfunction", "C.S. Flew-Is", 208, false));
-myLibrary.push(new Book("The Hobbit: There and Backpack Again", "J.R.R. Tugboat", 304, true));
+myLibrary.push(new Book("The Hobbit: There and Backpack Again", "J.R.R. Tugboat", 304, false));
 myLibrary.push(new Book("Percy Jackhammer and the Lightning Thief", "Riot Riordan", 377, false));
-myLibrary.push(new Book("The Chronicles of Narnia: The Lion, the Twitch, and the Audible Wardrobe", "C.S. Mouse", 767, true));
+myLibrary.push(new Book("The Chronicles of Narnia: The Lion, the Twitch, and the Audible Wardrobe", "C.S. Mouse", 767, false));
 myLibrary.push(new Book("The Hitchhiker's Guide to the Gag-alaxy", "Douglas Fart-Adams", 215, false));
-myLibrary.push(new Book("Alice's Restaurant in Wonderland", "Lewis Carol King", 365, true));
+myLibrary.push(new Book("Alice's Restaurant in Wonderland", "Lewis Carol King", 365, false));
 myLibrary.push(new Book("A Clash of Canapes", "George R. R. Martini", 874, false));
 
 setAddEventListeners();
