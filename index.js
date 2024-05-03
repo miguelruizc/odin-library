@@ -16,7 +16,6 @@ function setAddEventListeners(){
     addBtn.addEventListener("click", function() {
         const modal = document.getElementById("modal-form");
         modal.showModal();
-        addBookToLibrary();
     });
 
     //Cancel button
@@ -25,15 +24,31 @@ function setAddEventListeners(){
     cancelBtn.addEventListener("click", function() {
         const modal = document.getElementById("modal-form");
         modal.close();
-        console.log("cancel button clicked");
     });
 
-    //Submit button
-    let submitBtn = document.getElementById("submit");
+    //Submit event
+    let form = document.getElementById("form");
 
-    submitBtn.addEventListener("click", function(e) {
-        console.log("Submit button clicked");
+    form.addEventListener("submit", function(e) {
         e.preventDefault();
+        
+        //Create book object with form data
+        let newBookTitle = e.target.elements["title"].value;
+        console.log(newBookTitle);
+        let newBookAuthor = e.target.elements["author"].value;
+        console.log(newBookAuthor);
+        let newBookPages = e.target.elements["pages"].value;
+        console.log(newBookPages);
+        let newBookIsRead = e.target.elements["read"].checked;
+        console.log(newBookIsRead);
+        
+        let form = document.getElementById("form");
+        form.reset();
+        
+        addBookToLibrary();
+        
+        const modal = document.getElementById("modal-form");
+        modal.close();
     });
 }
 
