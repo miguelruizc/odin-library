@@ -32,29 +32,25 @@ function setAddEventListeners(){
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         
-        //Create book object with form data
+        //Create read and store form data
         let newBookTitle = e.target.elements["title"].value;
-        console.log(newBookTitle);
         let newBookAuthor = e.target.elements["author"].value;
-        console.log(newBookAuthor);
         let newBookPages = e.target.elements["pages"].value;
-        console.log(newBookPages);
         let newBookIsRead = e.target.elements["read"].checked;
-        console.log(newBookIsRead);
-        
+        //Insert new book
+        addBookToLibrary(newBookTitle, newBookAuthor, newBookPages, newBookIsRead);
+        //Clear form
         let form = document.getElementById("form");
         form.reset();
-        
-        addBookToLibrary();
-        
+        //Close modal
         const modal = document.getElementById("modal-form");
         modal.close();
     });
 }
 
-function addBookToLibrary() {
+function addBookToLibrary(title, author, numOfPages, isRead) {
     // Add new book to array
-    myLibrary.push(new Book("xxxxx", "xxxx", 666, false));
+    myLibrary.push(new Book(title, author, numOfPages, isRead));
     let newItemIndex = (myLibrary.length -1);
 
     // Create new HTML item 
@@ -169,15 +165,7 @@ myLibrary.push(new Book("The Hitchhiker's Guide to the Gag-alaxy", "Douglas Fart
 myLibrary.push(new Book("Alice's Restaurant in Wonderland", "Lewis Carol King", 365, true));
 myLibrary.push(new Book("A Clash of Canapes", "George R. R. Martini", 874, false));
 
-console.table(myLibrary);
-
 setAddEventListeners();
 generateHtmlCards();
 setEventListeners();
-
-//TO-DO:
-// -Modal form on add book click
-    // -title, author, number of pages, read
-    // need event.preventDefault so submit can be handled without sending to a server
-
 
