@@ -1,12 +1,14 @@
-function Book(title, author, numberOfPages, isRead) {
-    // title
-    this.title = title;
-    // author
-    this.author = author;
-    // numberOfPages
-    this.numberOfPages = numberOfPages;
-    // isRead
-    this.isRead = isRead;
+class Book {
+    constructor(title, author, numberOfPages, isRead) {
+        // title
+        this.title = title;
+        // author
+        this.author = author;
+        // numberOfPages
+        this.numberOfPages = numberOfPages;
+        // isRead
+        this.isRead = isRead;
+    }
 }
 
 function setAddEventListeners(){
